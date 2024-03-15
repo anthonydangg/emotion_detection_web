@@ -1,0 +1,124 @@
+body {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: #e1e1e1;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    justify-content: center;
+}
+
+header {
+    margin-bottom: 20px;
+}
+
+h1 {
+    color: #fff;
+    margin: 0;
+}
+
+h3 {
+    color: #fff;
+    margin: 0;
+}
+
+#startButton {
+    font-size: 24px;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    background-color: #1a73e8;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    margin-bottom: 20px;
+}
+
+#cakeSelection {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 0 auto;
+    width: 80%;
+    max-width: 600px; /* Adjust based on your preference */
+}
+
+#cake {
+    width: 100%; /* Makes image responsive within the container */
+    max-width: 200px; /* Maximum width of image */
+    height: auto; /* Maintain aspect ratio */
+    border: 4px solid #06f131;
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+#cake:hover {
+    transform: scale(1.05);
+}
+
+#instructions {
+    display: none;
+    color: #ccc;
+    font-size: 16px;
+    width: 80%;
+    margin: 20px auto;
+    padding-bottom: 10px;
+}
+
+
+@media (max-width: 768px) {
+    .cake {
+        max-width: 150px; /* Smaller max width for smaller devices */
+    }
+
+    #startButton {
+        padding: 10px 20px; /* Smaller button on smaller devices */
+        font-size: 18px;
+    }
+}
+
+
+
+
+
+
+#popup {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Ensure it's on top of other content */
+}
+
+#popupContent {
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    position: relative;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+#closePopup {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#popupImage {
+    width: 150px; /* Adjust size as needed */
+    height: auto;
+}
+

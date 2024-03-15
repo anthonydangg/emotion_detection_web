@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Emotion Recognition</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest"></script>
+
+
+</head>
+<body>
+    <header>
+        <h1 id="cake-header">Welcome to the Toddler's Cake Selector!</h1>
+    </header>
+    <button id="startButton">Start</button>
+    <video id="video" width="320" height="240" autoplay style="display: none; position: absolute; right: 0; top: 0;"></video>
+    <!-- New instruction paragraph -->
+    <h2 id="instructions">Please select your favorite cake to continue.</h2>
+    <div id="cakeSelection" style="display: none;">
+        <img src="images/cake1.jpeg" alt="Cake 1" id="cake" onclick="selectCake('cake1')">
+        <img src="images/cake2.jpeg" alt="Cake 2" id="cake" onclick="selectCake('cake2')">
+        <img src="images/cake3.jpeg" alt="Cake 3" id="cake" onclick="selectCake('cake3')">
+    </div>
+    <h3 id="feedbackmessageGood" style="display: none;">Nice!</h3>
+    <h3 id="feedbackmessageBad" style="display: none;">Oh no!!</h3>
+    <div id="feedbackBad" style="display: none;">
+        <img id="feedbackImage" src="images/angry-face.jpeg" alt="Feedback">
+    </div>
+
+    <div id="feedbackGood" style="display: none;">
+        <img id="feedbackImageGood" src="images/happy-face.jpeg" alt="Feedback">
+    </div>
+
+    <div id="predictionScreen" style="display: none;">
+        <h3 id="predictionMessage">Your emotional state appears to be:</h3>
+    </div>
+    <canvas id="canvas" width="320" height="240" style="display: none;"></canvas>
+
+    
+    
+    
+    
+    <script src="script.js"></script>
+    
+
+</body>
+</html>
+
+
+
